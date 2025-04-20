@@ -20,14 +20,14 @@ public class BorrowerController {
 
     @Autowired
     private RentalService rentalService;
-
+    //manages the borrowers
     @GetMapping("/manage")
     public String showBorrowerManagement(Model model) {
         model.addAttribute("borrowers", borrowerRepository.findAll());
         model.addAttribute("borrower", new Borrower());
         return "borrower_management";
     }
-
+    
     @PostMapping("/save")
     public String saveBorrower(@ModelAttribute("borrower") Borrower borrower) {
         borrowerRepository.save(borrower);
