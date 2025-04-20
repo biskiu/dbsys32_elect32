@@ -28,7 +28,7 @@ public class RentalController {
 
     @Autowired
     private BorrowerRepository borrowerRepository;
-
+    //Shows the Rental Management Page
     @GetMapping("/manage")
     public String showRentalManagement(Model model) {
         model.addAttribute("books", bookRepository.findAll());
