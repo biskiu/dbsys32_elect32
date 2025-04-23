@@ -76,6 +76,7 @@ public class Rental {
         return penalty;
     }
 
+    // Sets the penalty value for the current instance.
     public void setPenalty(double penalty) {
         this.penalty = penalty;
     }
