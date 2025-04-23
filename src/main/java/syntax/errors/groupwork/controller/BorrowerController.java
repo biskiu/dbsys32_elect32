@@ -27,7 +27,7 @@ public class BorrowerController {
         model.addAttribute("borrower", new Borrower());
         return "borrower_management";
     }
-    
+      //saves the borrowers
     @PostMapping("/save")
     public String saveBorrower(@ModelAttribute("borrower") Borrower borrower) {
         borrowerRepository.save(borrower);
